@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --hue: 220;
+    --holesize: 60%;
+    --track-bg: #e4e5f2;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: #64646f33 0px 7px 24px 0px;
+    background-color: white;
+    z-index: 1111;
+}
+
+header h1 {
+    display: flex;
+    align-items: center;
+    padding: 12px 18px;
+    font-family: "Raleway", serif;
+    margin-left: 1rem;
+    color: #17161d;
+
+    span {
+        color: orangered;
+    }
+}
+
+header h1 img {
+    width: 39px;
+    height: 51px;
+    object-fit: contain;
+}
+
+nav {
+    display: flex;
+    padding: 0 2rem 0 0;
+    gap: 30px;
+    border-radius: 30px;
+    margin-right: 2rem;
+}
+
+nav a {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #86878c;
+    text-transform: capitalize;
+    text-decoration: none;
+    transition: all .3s ease;
+
+    img {
+        width: 18px;
+        transition: all .4s ease;
+    }
+}
+
+nav a:hover {
+    color: black;
+
+    img {
+        transform: scale(1.1);
+    }
+}
+
+section {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.left {
+    width: 43%;
+    background-color: #fff;
+    padding: 12px;
+    border-radius: 15px;
+    box-shadow: #64646f33 0px 7px 29px 0px;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.right {
+    width: 55%;
+    background-color: #fff;
+    padding: 12px;
+    border-radius: 15px;
+    box-shadow: #64646f33 0px 7px 29px 0px;
+}
+
+.todo-card {
+    border: 1px solid #e2e4f0;
+    height: 100%;
+    border-radius: 15px;
+    font-family: "Poppins", serif;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.todo-card h1 {
+    color: #17161d;
+    text-align: center;
+    font-weight: 600;
+    font-size: 34px;
+    text-transform: capitalize;
+}
+
+.todo-card h1:first-of-type {
+    margin-top: 28px;
+}
+
+.todo-card h1:last-of-type {
+    margin-bottom: 7px;
+}
+
+.todo-card p {
+    text-align: center;
+    font-size: 15px;
+    color: #b2b1b3;
+    text-transform: capitalize;
+}
+
+.todo-card .left-img {
+    width: 6rem;
+    height: 14rem;
+    position: absolute;
+    right: -5px;
+    top: 45%;
+    transform: translateY(-50%) rotate(344deg);
+}
+
+.todo-card .right-img {
+    width: 6rem;
+    height: 14rem;
+    position: absolute;
+    left: -5px;
+    top: 45%;
+    transform: translateY(-50%) rotate(373deg) scaleX(-1);
+}
+
+.input-sec {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin: 2rem auto;
+    height: 45px;
+}
+
+.input-box {
+    border: 1px solid black;
+    border-radius: 21px;
+    width: 75%;
+    overflow: hidden;
+    height: 100%;
+    position: relative;
+}
+
+input {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    font-size: 18px;
+    color: #444444;
+    border: none;
+    outline: none;
+    font-family: "Raleway", serif;
+    padding: 21px 18px;
+    font-weight: 500;
+}
+
+.input-sec>button {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: #f4643A;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+}
+
+.input-sec>button:hover {
+    background-color: #ff3c00;
+}
+
+.result-box {
+    width: 66%;
+    margin: 2rem auto;
+    height: 15rem;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+li {
+    text-align: left;
+    padding-left: 3rem;
+    text-transform: capitalize;
+    list-style: none;
+    margin-bottom: 1rem;
+    position: relative;
+    color: #535353;
+    text-transform: uppercase;
+    font-family: cursive;
+}
+
+li::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 1px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-image: url(img/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+}
+
+li.checked {
+    text-decoration: line-through;
+}
+
+li.checked::after {
+    background-image: url(/img/checked.png);
+}
+
+li span {
+    position: absolute;
+    right: 0;
+    top: 1px;
+    width: 20px;
+    height: 20px;
+    background-image: url(/img/x.png);
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+}
+
+li i {
+    position: absolute;
+    right: 28px;
+    font-size: 13px;
+    top: 4px;
+    cursor: pointer;
+}
+
+li.list {
+    color: #3a9a43;
+}
+
+#empty-message {
+    text-align: center;
+    color: gray;
+    font-style: italic;
+    display: none;
+    position: relative;
+    bottom: 15rem;
+}
+
+.achieve {
+    border: 1px solid #e2e4f0;
+    border-radius: 15px;
+    margin-top: 9px;
+}
+
+.achieve-text {
+    font-weight: 600;
+    font-size: 34px;
+    color: #17161d;
+    margin: 16px 28px 0;
+    text-transform: capitalize;
+    font-family: "Poppins", serif;
+}
+
+.radialProgress {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10rem;
+    width: 10rem;
+    position: relative;
+    z-index: 222;
+    margin: 28px;
+}
+
+.radialProgress::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 50%;
+    z-index: -1;
+    background: conic-gradient(green, green, green var(--progress, 0%), hsl(19.38deg 100% 50%) var(--progress, 0%) 100%);
+    mask-image: radial-gradient(transparent var(--holesize), black calc(var(--holesize) + 0.5px));
+    transition: all .5s ease;
+}
+
+.progress-box{
+    display: flex;
+    align-items: center;
+}
+
+.task{
+    font-family: cursive;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 9px;
+}
+
+.pending-task{
+    span{
+        display: inline-block;
+        height: 7px;
+        border-radius: 50%;
+        width: 7px;
+        background-color: orange;
+    }
+}
+.completed-task{
+    span{
+        display: inline-block;
+        height: 7px;
+        border-radius: 50%;
+        width: 7px;
+        background-color: green;
+    }
+}

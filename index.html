@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List - By Ankita</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css">
+</head>
+<body>
+    <div class="main-container">
+        <header>
+            <h1>
+                <img src="/img/logo.png" alt="logo">
+                Goal <span>Getter</span>
+            </h1>
+
+            <nav>
+                <a href="#"><img src="/img/appointment.png" alt="icon"> Today</a>
+                <a href="#"><img src="/img/premium-badge.png" alt="icon"> Achievements</a>
+                <a href="#"><img src="/img/hinduist-yoga-position.png" alt="icon"> Therapy</a>
+                <a href="#"><img src="/img/travel.png" alt="icon"> Explore</a>
+                <a href="#"><img src="/img/user.png" alt="icon"> Login</a>
+            </nav>
+        </header>
+
+        <section>
+            <div class="left">
+                <div class="card">
+                    <img src="/img/nature (1).jpg" alt="TIMEiMAGE" id="Time-Image">
+                    <div class="achieve">
+                        <h1 class="achieve-text">Achievements</h1>
+                        <div class="progress-box">
+                            <div class="radialProgress"></div>
+                            <div class="tasks">
+                                <div class="task completed-task">
+                                    <span></span>
+                                    <p id="cper">0% Completed</p>
+                                </div>
+                                <div class="task pending-task">
+                                    <span></span>
+                                    <p id="pper">0% Pending</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="todo-card">
+                    <img src="/img/leave.png" alt="leave" class="left-img">
+                    <img src="/img/leave.png" alt="leave" class="right-img">
+                    <h1>Have a Good Day Ankita,</h1>
+                    <h1 id="day"></h1>
+                    <p>Get closer to your goal, one step at a time.</p>
+                    <div class="input-sec">
+                        <div class="input-box">
+                            <input type="text" id="item" placeholder="I want to...">
+                        </div>
+                        <button onclick="addTask()"><i class="fa-light fa-paper-plane-top"></i></button>
+                    </div>
+                    <ul class="result-box" id="result-box"></ul>
+                    <p id="empty-message">Your To-Do List Is Empty. Start Adding Tasks!</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+</body>
+</html>
